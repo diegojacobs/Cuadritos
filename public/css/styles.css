@@ -1,2 +1,116 @@
-body {
-  background: #aaa; }
+/*Variables*/
+/*Loops*/
+.s1 {
+  background-color: #1414ff; }
+
+.s1 input[type="text"] {
+  background: #1414ff; }
+
+.s2 {
+  background-color: #2828ff; }
+
+.s2 input[type="text"] {
+  background: #2828ff; }
+
+.s3 {
+  background-color: #3c3cff; }
+
+.s3 input[type="text"] {
+  background: #3c3cff; }
+
+.s4 {
+  background-color: #5050ff; }
+
+.s4 input[type="text"] {
+  background: #5050ff; }
+
+.s5 {
+  background-color: #6464ff; }
+
+.s5 input[type="text"] {
+  background: #6464ff; }
+
+.s6 {
+  background-color: #7878ff; }
+
+.s6 input[type="text"] {
+  background: #7878ff; }
+
+.s7 {
+  background-color: #8c8cff; }
+
+.s7 input[type="text"] {
+  background: #8c8cff; }
+
+.s8 {
+  background-color: #a0a0ff; }
+
+.s8 input[type="text"] {
+  background: #a0a0ff; }
+
+/*CSS*/
+.section {
+  height: 300px;
+  margin-bottom: 10px;
+  padding: 10px; }
+
+.s4 {
+  height: 75px;
+  padding-right: 150px;
+  position: relative; }
+
+.s4 input[type="text"] {
+  border: none;
+  box-sizing: border-box;
+  height: 100%;
+  position: block;
+  width: 100%; }
+
+.section.s4 input[type="button"] {
+  background: grey;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 150px; }
+
+/*Responsive Tablet*/
+@media screen and (min-width: 480px) {
+  .first-column-wrapper,
+  .second-column-wrapper {
+    box-sizing: border-box;
+    float: left;
+    width: 50%; }
+  .first-column-wrapper {
+    padding-right: 5px; }
+  .second-column-wrapper {
+    padding-left: 5px; }
+  .third-column-wrapper {
+    box-sizing: border-box;
+    clear: both; } }
+
+/*Responsive Desktop*/
+@media screen and (min-width: 768px) {
+  .first-column-wrapper,
+  .second-column-wrapper {
+    width: 33.33%; }
+  .second-column-wrapper {
+    padding-right: 5px; }
+  .third-column-wrapper {
+    clear: none;
+    float: left;
+    padding-left: 5px;
+    width: 33.34%; }
+  .section.s8 {
+    clear: both; }
+  .first-column,
+  .second-column {
+    box-sizing: border-box;
+    float: left;
+    width: 50%; }
+  .first-column {
+    padding-right: 5px; }
+  .second-column {
+    padding-left: 5px; }
+  .clear {
+    clear: both; } }

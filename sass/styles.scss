@@ -1,5 +1,111 @@
-$dark-color: #aaa;
+/*Variables*/
+$box-sizing: border-box;
+$margin: 10px;
+$padding: 5px;
+$pc: 768px;
+$s-color: blue;
+$tablet: 480px;
 
-body{
-  background: $dark-color;
+/*Loops*/
+@for $i from 1 to 9{
+	.#{s}#{$i}
+	{background-color: $s-color + $i*20;}
+
+  @if $i=4
+  { 
+    .#{s}#{$i} input[type="text"]
+		{background: $s-color + $i*20;}
+	}
+}
+
+/*CSS*/
+.section {
+   height:300px;
+   margin-bottom: $margin;
+   padding: 10px;
+}
+
+.s4{
+  height: 75px;
+  padding-right: 150px;
+  position: relative;
+}
+
+.s4 input[type="text"]{
+  border: none;
+  box-sizing: $box-sizing;
+  height: 100%;
+  position: block;
+  width: 100%;
+}
+.section.s4 input[type="button"] {
+  background: grey;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 150px;
+}
+
+/*Responsive Tablet*/
+@media screen and (min-width: $tablet) {
+  .first-column-wrapper,
+  .second-column-wrapper{
+    box-sizing: $box-sizing;
+    float: left;
+    width: 50%;
+  }
+
+  .first-column-wrapper{
+    padding-right: $padding;
+  }
+  
+  .second-column-wrapper{
+    padding-left: $padding;
+  }
+
+  .third-column-wrapper{
+    box-sizing: $box-sizing;
+    clear: both;
+  }
+}
+
+/*Responsive Desktop*/
+@media screen and (min-width: $pc) {
+  .first-column-wrapper,
+  .second-column-wrapper{
+    width: 33.33%;
+  }
+
+  .second-column-wrapper{
+    padding-right: $padding;
+  }
+  .third-column-wrapper{
+    clear: none;
+    float: left;
+    padding-left: $padding;
+    width: 33.34%;
+  }
+
+  .section.s8{
+    clear: both;
+  }
+  
+  .first-column,
+  .second-column{
+    box-sizing: $box-sizing;
+    float: left;
+    width: 50%;
+  }
+
+  .first-column{
+    padding-right: $padding;
+  }
+  
+  .second-column{
+    padding-left: $padding;
+  }
+  .clear{
+    clear: both;
+  }
 }
